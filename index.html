@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <button id="createNew" onclick="newUser()">New User</button> -->
+        <button id="createNew">New User</button>
+        <div class="user">
+            <br>
+            <div class="container">
+                <!-- <form action="indexCreate.php" method="POST" name="myForm"> --> 
+                    <!-- 👆 This will refresh the page and go to indexCreate.php -->
+                <form name="myForm">
+                    <br>
+                    <input type="hidden" name="sno" id="sno">
+                    Name: <input type="text" name="name" id="name" placeholder="Enter your Name"><br>
+                    E-mail: <input type="email" name="email" id="email" placeholder="Enter your Email"><br>
+                    Age: <input type="text" name="age" id="age" placeholder="Enter your Age:" required><br>
+                    Position: <input type="text" name="position" id="position" placeholder="Enter your Position"
+                        required><br>
+                    Company: <input type="text" name="company" id="company" placeholder="Enter your Company"
+                        required><br><br>
+                    <button type="button" class="submit">Submit</button>
+                    <button id="cancel">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Time Stamp</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="getData">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <script src="//cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css"></script> -->
+    <script src="index.js"></script>
+</body>
+<!-- <button class='btn btn-sm btn-warning'>Edit</button>
+                <button class='btn btn-sm btn-danger'>Delete</button> -->
+</html>
